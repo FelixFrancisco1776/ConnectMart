@@ -7,7 +7,7 @@ class Category extends Model {}
 Category.init(
   {
     id:{
-      type; DataTransfer.INTEGER,
+      type: DataTransfer.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false
