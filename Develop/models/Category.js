@@ -11,7 +11,7 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
       allowNull: false
-    }
+    },
     category_name: {
       YTPE: DataTypes.STRING,
       allowNull: false

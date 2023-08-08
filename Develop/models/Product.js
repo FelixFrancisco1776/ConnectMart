@@ -15,8 +15,34 @@ Product.init(
       autoIncrement: true,
       allowNull: false
     },
-    product_
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
   },
+  price: {
+    type: DataTypes.DECIMAL,
+    allowNull: false,
+    validate: {
+      isDecimal: true,
+      allowNull: false,
+    },
+  },
+  stock: {
+    type: DataTypes.INTEGER,
+    defaultValue: 10,
+    allowNull: false,
+    validate: {
+      isNumeric: true,
+    },
+  },
+  category_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'Category', // Replace 'Category' with the actual name of the Category model
+      key: 'id',
+    },
+  },
+
   {
     sequelize,
     timestamps: false,
